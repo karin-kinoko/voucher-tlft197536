@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Voucher - TLFT197536 | Kinoko Traffic Co., Ltd.</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --navy: #1B2838;
+  --navy-light: #2a3f54;
+  --gold: #B8941F;
+  --gold-light: #d4b44a;
+  --bg: #fafaf8;
+  --white: #ffffff;
+  --text: #1B2838;
+  --text-light: #5a6a7a;
+  --border: #e8e4dc;
+}
+
+@media print {
+  body { background: white; }
+  .voucher-card { box-shadow: none; border: 1px solid #ddd; }
+  .no-print { display: none; }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  line-height: 1.6;
+}
+
+.voucher-card {
+  background: var(--white);
+  max-width: 680px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(27, 40, 56, 0.08);
+  overflow: hidden;
+}
+
+/* Header */
+.voucher-header {
+  background: var(--navy);
+  padding: 2rem 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header-text {
+  color: var(--white);
+}
+
+.header-text h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.2rem;
+}
+
+.header-text p {
+  font-size: 0.8rem;
+  color: var(--gold-light);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Gold accent bar */
+.gold-bar {
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+}
+
+/* Body */
+.voucher-body {
+  padding: 2.5rem;
+}
+
+.voucher-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.voucher-title h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.voucher-title .ref-number {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 0.3rem;
+}
+
+/* Info grid */
+.info-section {
+  margin-bottom: 1.8rem;
+}
+
+.info-section-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0.6rem 1.5rem;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.info-value {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.info-value.highlight {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+/* Services */
+.services-list {
+  list-style: none;
+  padding: 0;
+}
+
+.services-list li {
+  padding: 0.5rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.services-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+
+/* Notes */
+.notes {
+  background: #f8f6f2;
+  border-left: 3px solid var(--gold);
+  padding: 1rem 1.2rem;
+  margin-top: 1.5rem;
+  border-radius: 0 6px 6px 0;
+}
+
+.notes p {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* Footer */
+.voucher-footer {
+  background: var(--navy);
+  padding: 1.2rem 2.5rem;
+  text-align: center;
+}
+
+.voucher-footer p {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+}
+
+.voucher-footer a {
+  color: var(--gold-light);
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body { padding: 1rem; }
+  .voucher-header { padding: 1.5rem; }
+  .voucher-body { padding: 1.5rem; }
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+  .info-label { margin-top: 0.5rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="voucher-card">
+  <!-- Header -->
+  <div class="voucher-header">
+    <div class="logo">
+      <img src="./logo.png" alt="Kinoko Traffic Co., Ltd.">
+    </div>
+    <div class="header-text">
+      <h1>Kinoko Traffic Co., Ltd.</h1>
+      <p>Premium Chauffeur Service</p>
+    </div>
+  </div>
+  <div class="gold-bar"></div>
+
+  <!-- Body -->
+  <div class="voucher-body">
+    <div class="voucher-title">
+      <h2>Service Voucher</h2>
+      <p class="ref-number">Reference: TLFT197536</p>
+    </div>
+
+    <!-- Guest Info -->
+    <div class="info-section">
+      <div class="info-section-title">Guest Information</div>
+      <div class="info-grid">
+        <span class="info-label">Guest Name</span>
+        <span class="info-value highlight">Mr. Estevam Costa Marques</span>
+        <span class="info-label">Number of Guests</span>
+        <span class="info-value">2</span>
+        <span class="info-label">Hotel</span>
+        <span class="info-value">Imperial Hotel, Tokyo</span>
+      </div>
+    </div>
+
+    <!-- Service Details -->
+    <div class="info-section">
+      <div class="info-section-title">Service Details</div>
+      <div class="info-grid">
+        <span class="info-label">Date</span>
+        <span class="info-value highlight">Thursday, June 4, 2026</span>
+        <span class="info-label">Service Type</span>
+        <span class="info-value">Airport Transfer (One-way)</span>
+        <span class="info-label">Pickup Location</span>
+        <span class="info-value">Haneda Airport — Arrival Lobby</span>
+        <span class="info-label">Pickup Time</span>
+        <span class="info-value highlight">13:55 (Flight arrival)</span>
+        <span class="info-label">Flight</span>
+        <span class="info-value">JL 48</span>
+        <span class="info-label">Drop-off</span>
+        <span class="info-value">Imperial Hotel, Tokyo</span>
+        <span class="info-label">Luggage</span>
+        <span class="info-value">Yes</span>
+      </div>
+    </div>
+
+    <!-- Included Services -->
+    <div class="info-section">
+      <div class="info-section-title">Included Services</div>
+      <ul class="services-list">
+        <li>Meet & Greet service at arrival lobby</li>
+        <li>English-speaking chauffeur</li>
+        <li>Luggage assistance</li>
+        <li>Complimentary waiting time for flight delays</li>
+      </ul>
+    </div>
+
+    <!-- Notes -->
+    <div class="notes">
+      <p>Our chauffeur will be waiting at the arrival lobby holding a name board. Please proceed through customs and look for the "Kinoko Traffic" sign in the meeting area.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="voucher-footer">
+    <p>Kinoko Traffic Co., Ltd. — 6F Success Ginza East Bldg, 1-13-10 Tsukiji, Chuo-ku, Tokyo 104-0045<br>
+    <a href="https://kinoko-group.co.jp">kinoko-group.co.jp</a></p>
+  </div>
+</div>
+
+</body>
+</html>
